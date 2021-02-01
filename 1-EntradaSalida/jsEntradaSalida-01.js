@@ -3,5 +3,5 @@ Al presionar el  botón,
 se debe mostrar un mensaje como el siguiente "Esto funciona de maravilla"*/
 function mostrar()
 {
-	alert("Hola UTN, soy tony");
+	alert("Hola UTN, soy tony, esto funciona de maravilla");
 }
