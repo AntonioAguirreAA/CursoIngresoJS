@@ -1,6 +1,37 @@
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	let destinoIngresado
+	let mensaje;
+
+	destinoIngresado = document.getElementById("txtIdDestino").value;
+
+	switch (destinoIngresado) {
+		case "Bariloche":
+
+		mensaje = "Oeste.";
+
+		break;
+
+		case "Cataratas":
+
+		mensaje = "Norte.";
+
+		break;
+
+		case "Mar del plata":
+
+		mensaje = "Este.";
+
+		break;
+
+		case "Ushuaia":
+
+		mensaje = "Sur.";
+
+		break;
+
+	}
+
+	alert ("El punto cardinal es: " + mensaje);
 
 }//FIN DE LA FUNCIÓN
