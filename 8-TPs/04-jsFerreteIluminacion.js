@@ -1,4 +1,4 @@
-/*4.	Para el departamento de iluminación:
+  /*4.	Para el departamento de iluminación:
 Tomando en cuenta que todas las lámparas están en oferta al mismo precio de $35 pesos final.
 A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%.
 B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
@@ -13,41 +13,84 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio ()
 {
 
-  // A
  	let cantidad;
   let descuento;
   let precioFinal;
   let marca;
+  let impuesto;
 
   cantidad = parseInt(document.getElementById("txtIdCantidad").value);
   marca = document.getElementById("Marca").value;
+  descuento = parseFloat(descuento);
 
   if (cantidad > 5)   //EJERCICIO A
   {
 
-    descuento = parseFloat(0.5);
+    descuento = 50;
 
   }
-  else if (cantidad == 5)   //EJERCICIO B
+  switch (cantidad)   
   {
+    case 5:   //EJERCICIO B
+      if (marca == "ArgentinaLuz")
+      {
+        descuento = 40;
+      } else {
+        descuento = 30;
+      }
 
-    if (marca == "ArgentinaLuz")
-    {
-      descuento = parseFloat(0.4);
-    } else {
-      descuento = parseFloat(0.3);
-    }
+      break;
 
-  }
-  else
-  {
+  
+    case 4:   //EJERCICIO C
+      if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+      {
+        
+        descuento = 25;
 
-    descuento = parseFloat(1);
+      }  else  {
 
+        descuento = 20;
+
+      }
+      break;
+    
+    case 3:   //EJERCICIO D
+      switch (marca)
+      {
+        case "ArgentinaLuz":
+          descuento = 15;
+          break;
+
+        case "FelipeLamparas":
+          descuento = 10;
+          break;
+
+        default:
+          descuento = 5;
+          break;
+      }
+      break;
+
+  
   }
 
   precioFinal = parseFloat(precioFinal);
-  precioFinal = (cantidad * 35) * descuento;
-  alert("El precio final es: " + precioFinal);
+  precioFinal = cantidad * 35;
+  precioFinal = precioFinal - (precioFinal * descuento / 100);
+
+  if (precioFinal > 120)
+  {
+
+    impuesto = 0.1 + precioFinal
+    precioFinal = precioFinal + impuesto
+    alert("IIBB Usted pagó: $" + impuesto)
+    alert("El precio final es: " + precioFinal);
+
+  } else {
+  
+    alert("El precio final es: " + precioFinal);
+
+  }
 
 }

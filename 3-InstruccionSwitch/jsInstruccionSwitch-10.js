@@ -1,3 +1,6 @@
+// SWITCH EJERCICIO 10
+// ANTONIO AGUIRRE 1°A
+
 function mostrar()
 {
 	let estacionIngresada;

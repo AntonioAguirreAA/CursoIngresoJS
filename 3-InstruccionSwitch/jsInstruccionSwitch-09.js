@@ -1,3 +1,6 @@
+// SWITCH EJERCICIO 9
+// ANTONIO AGUIRRE
+
 function mostrar()
 {
 	let estacionIngresada;

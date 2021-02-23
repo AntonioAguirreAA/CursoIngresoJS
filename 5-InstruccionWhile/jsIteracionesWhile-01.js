@@ -6,10 +6,10 @@ function mostrar()
 	let numero;
 	numero = 0;
 
-	do {
+	while (numero < 10)
+	{
 	numero ++;
 	alert (numero);
 	}
-	while (numero < 10)
-
+	
 }//FIN DE LA FUNCIÓN

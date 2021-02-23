@@ -30,6 +30,8 @@ function mostrar()
 
 			mensaje = "Este mes tiene 30 días.";
 
+			break;
+
 	}
 
 	alert (mensaje);

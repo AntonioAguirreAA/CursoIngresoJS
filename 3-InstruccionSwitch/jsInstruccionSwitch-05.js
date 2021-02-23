@@ -15,6 +15,8 @@ function mostrar()
 
 			mensaje = "Es de mañana.";
 			alert (mensaje);
+
+			break;
 	}
 
 

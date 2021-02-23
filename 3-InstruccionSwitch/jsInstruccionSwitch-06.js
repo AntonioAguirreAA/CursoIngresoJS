@@ -51,6 +51,8 @@ function mostrar()
 
 		mensaje = "No es una hora válida.";
 
+		break;
+
 	}
 
 	alert(mensaje);

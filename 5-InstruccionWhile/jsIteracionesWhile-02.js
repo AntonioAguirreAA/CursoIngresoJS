@@ -6,10 +6,11 @@ function mostrar()
 	let numero;
 	numero = 11;
 
-	do {
+	while (numero > 1) 
+	{
 	numero --;
 	alert (numero);
 	}
-	while (numero > 1)
+	
 
 }//FIN DE LA FUNCIÓN
